@@ -7,6 +7,16 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  private correo: string;
+  
+  private texto:string = "Usuario";
+
+  constructor() { 
+    
+  }
+  
+  public guardar():void {
+    alert("Se hizo click, el correo ingresado es " + this.correo);
+  }
 
 }
