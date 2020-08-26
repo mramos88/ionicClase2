@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   private correo: string;
+  private contrasenia: string;
+  private rcontrasenia: string;
+  private sexo = "m";
+  private textSexo: string;
   
   private texto:string = "Usuario";
 
@@ -15,8 +19,19 @@ export class HomePage {
     
   }
   
-  public guardar():void {
-    alert("Se hizo click, el correo ingresado es " + this.correo);
+  public guardar(): void {
+    if (this.contrasenia == this.rcontrasenia) {
+       this.textSexo = "Femenino";
+      if (this.sexo == "m") {
+        this.textSexo = "Masculino";
+      }
+      alert("Se hizo click, el correo ingresado es " + this.correo +
+        ". El sexo es " + this.textSexo);  
+    } else {
+      alert("Las constraseñas son incorrectas!");
+    }
+
+    
   }
 
 }

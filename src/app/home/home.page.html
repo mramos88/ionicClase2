@@ -13,14 +13,14 @@
   </ion-item>
   <ion-item>
     <ion-label position="floating">Contraseña <ion-text color="danger">*</ion-text></ion-label>
-    <ion-input type="password" ></ion-input>
+    <ion-input [(ngModel)]="contrasenia" type="password" ></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Repetir contrseña <ion-text color="danger">*</ion-text></ion-label>
-    <ion-input type="password" ></ion-input>
+    <ion-input [(ngModel)]="rcontrasenia" type="password" ></ion-input>
   </ion-item>
   <ion-item>
-    <ion-radio-group value="m">
+    <ion-radio-group  [(ngModel)]="sexo">
       <ion-label position="inline"> Sexo</ion-label>
       <ion-item>
         <ion-label > Femenino</ion-label>
